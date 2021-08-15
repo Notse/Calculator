@@ -1,0 +1,82 @@
+
+body {
+    background:whitesmoke;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding:12px;
+    border-radius:0 50px 50px 0;
+    position: fixed;
+    left:-140px;
+    background-color: teal;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: whitesmoke;
+    font-size:1.5em;
+    transition: all 350ms linear;
+    cursor:pointer;   
+}
+i {
+    font-size:50px;
+    margin-left:10px;
+}
+header:hover {
+    left:0px;
+}
+
+button{
+    width: 25%;
+    height: 25%;
+    font-size:3em;
+    background:transparent;
+    border: none;
+    color:white;
+}
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+button:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#display {
+    background-color: #444;
+    height: 30vh;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: right;
+    font-size:5rem;
+    padding: 15px;
+    caret-color:#09ddc1;
+    color:whitesmoke;
+}
+
+#display::-webkit-inner-spin-button,
+#display::-webkit-inner-spin-button {
+    appearance: none;
+}
+#keypad {
+    height: 70vh;
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#equal, #clear{
+    color:rgb(1, 133, 116);
+}
+
+.Special {
+    background-color: #018574;
+}
+.Special:hover {
+    background-color: rgb(92, 199, 185, 0.7);
+}
+.Special:active {
+    background-color: rgb(92, 199, 185, 0.8);
+}
