@@ -23,3 +23,18 @@ function calculate() {
 }
 
 let reset = () => Display.value  = null ;
+
+
+if (navigator.serviceWorker) {
+    // Start registration process on every page load
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+            // The register function takes as argument
+            // the file path to the worker's file
+            .register('/sw.js')
+            // Gives us registration object
+            .then(reg => console.log('Service Worker Registered'))
+            .catch(swErr => console.log(
+                  `Service Worker Installation Error: ${swErr}}`));
+      });
+  }

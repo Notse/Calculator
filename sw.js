@@ -1,19 +1,5 @@
-if (navigator.serviceWorker) {
-    // Start registration process on every page load
-    window.addEventListener('load', () => {
-        navigator.serviceWorker
-            // The register function takes as argument
-            // the file path to the worker's file
-            .register('/sw.js')
-            // Gives us registration object
-            .then(reg => console.log('Service Worker Registered'))
-            .catch(swErr => console.log(
-                  `Service Worker Installation Error: ${swErr}}`));
-      });
-  }
 
-
-var cacheName = 'geeks-cache-v1';
+var cacheName = 'calci-cache';
 var cacheAssets = [
 	'/index.html',
 	'/style.css',
@@ -59,7 +45,7 @@ self.addEventListener('activate', e => {
 })
 
 
-var cacheName = 'geeks-cache-v1';
+var cacheName = 'calci-cache';
 
 // Call Fetch Event
 self.addEventListener('fetch', e => {
