@@ -4,7 +4,7 @@ if (navigator.serviceWorker) {
         navigator.serviceWorker
             // The register function takes as argument
             // the file path to the worker's file
-            .register('/service_worker.js')
+            .register('/sw.js')
             // Gives us registration object
             .then(reg => console.log('Service Worker Registered'))
             .catch(swErr => console.log(
@@ -15,9 +15,9 @@ if (navigator.serviceWorker) {
 
 var cacheName = 'geeks-cache-v1';
 var cacheAssets = [
-	'/assets/pages/offline-page.html',
-	'/assets/styles/offline-page.css',
-	'/assets/script/offline-page.js',
+	'/index.html',
+	'/style.css',
+	'/script.js',
 
 ];
 
