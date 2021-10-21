@@ -2,6 +2,8 @@
 
 Calculator is a Simple Demo of Progressive Web App (PWA) for basic calculations made with common web technologies HTML , CSS and JavaScript.
 
+[DEMO](https://notse.github.io/Calculator/)
+
 ## Features
 
 - Full responsiveness and browser compatibility works on both mobile and desktop devices
