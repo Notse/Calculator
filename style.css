@@ -80,3 +80,10 @@ button:active {
 .Special:active {
   background-color: rgb(92, 199, 185, 0.8);
 }
+
+
+@media screen AND (max-width: 700px) {
+  .github-logo{
+    display: none;
+  }
+}
