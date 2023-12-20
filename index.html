@@ -18,25 +18,31 @@
     <!-- Author @Notse github.com/notse -->
         <a href="https://github.com/notse" target="_blank"><header class="github-logo">Nikhil Notse <i class="fab fa-github"></i></header></a>
             <!-- Display Numbers -->
-            <input id="display" type="text" placeholder="0" autofocus >
+            <input id="display" type="text" placeholder="0" value="0">
             <!-- keypad -->
-                <div id="keypad">
-                    <button  onclick="display('9')" >9</button>
-                    <button  onclick="display('8')">8</button>
-                    <button  onclick="display('7')">7</button>
-                    <button  onclick="operators('/')" class="Special">/</button>
-                    <button  onclick="display('6')">6</button>
-                    <button  onclick="display('5')">5</button>
-                    <button  onclick="display('4')">4</button>
-                    <button  onclick="operators('*')" class="Special">x</button>
-                    <button  onclick="display('2')">2</button>
-                    <button  onclick="display('3')">3</button>
-                    <button  onclick="display('1')">1</button>
-                    <button  onclick="operators('-')" class="Special">-</button>
-                    <button  onclick="reset()" id="Clear">C</button>
-                    <button  onclick="display('0')">0</button>
-                    <button  onclick="calculate()" id="equal">=</button>
-                    <button  onclick="operators('+')" class="Special">+</button>
+                <div id="keypad" class="disable-dbl-tap-zoom">
+                    <button onclick="resetEntry()">CE</button>
+                    <button onclick="reset()" id="Clear">C</button>
+                    <button onclick="removeCharacter()">
+                        <i class="fas fa-backspace"></i>
+                    </button>
+                    <button onclick="operators('/')" class="Special">/</button>
+                    <button onclick="display('7')">7</button>
+                    <button onclick="display('8')">8</button>
+                    <button onclick="display('9')" >9</button>
+                    <button onclick="operators('*')" class="Special">x</button>
+                    <button onclick="display('4')">4</button>
+                    <button onclick="display('5')">5</button>
+                    <button onclick="display('6')">6</button>
+                    <button onclick="operators('-')" class="Special">-</button>
+                    <button onclick="display('1')">1</button>
+                    <button onclick="display('2')">2</button>
+                    <button onclick="display('3')">3</button>
+                    <button onclick="operators('+')" class="Special">+</button>
+                    <button onclick="operators('+/-')">&#177;</button>
+                    <button onclick="display('0')">0</button>
+                    <button onclick="operators('.')">.</button>
+                    <button onclick="calculate()" id="equal">=</button>
                 </div>
 </body>
     <script src="script.js"></script>
