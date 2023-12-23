@@ -15,6 +15,7 @@ header {
   padding: 12px;
   border-radius: 0 50px 50px 0;
   position: fixed;
+  top: 0;
   left: -140px;
   background-color: teal;
   font-size: 1.5em;
@@ -24,17 +25,17 @@ header {
   transition: all 350ms linear;
   cursor: pointer;
 }
+
 i {
   font-size: 50px;
   margin-left: 10px;
 }
+
 header:hover {
   left: 0px;
 }
 
 button {
-  width: 25%;
-  height: 25%;
   font-size: 8vmin;
   background: transparent;
   border: none;
@@ -62,11 +63,12 @@ button:active {
 #display::-webkit-inner-spin-button {
   appearance: none;
 }
+
 #keypad {
   height: 70vh;
   background-color: #333;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 #equal,
@@ -77,13 +79,17 @@ button:active {
 .Special {
   background-color: #018574;
 }
+
 .Special:active {
   background-color: rgb(92, 199, 185, 0.8);
 }
 
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
 
 @media only screen and (max-width: 700px) {
-  .github-logo{
-    display: none !important; 
+  .github-logo {
+    display: none !important;
   }
 }
